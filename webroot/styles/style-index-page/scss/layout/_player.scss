@@ -1,0 +1,75 @@
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+    
+    .player-name {
+      color: $white;
+      background-color: $blue-light;
+      border-radius: 2%;
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .player-score {
+      text-align: center;
+      font-size: 80px;
+      font-weight: 800;
+      color: $red-bold;
+      margin-bottom: 75px;
+      margin-top: 25%;
+    }
+    
+    .active { 
+      background-color: $blue-light; 
+
+      .player-name { 
+        font-weight: 600; 
+      }
+
+      .player-name::after {
+        font-size: 47px;
+        position: absolute;
+        color: $red-bold;
+        top: -7px;
+        right: 10px;
+      }
+    }
+    
+    
+    .player-current-box {
+      background-color: $blue-light;
+      border-radius: 20%;
+      color: $white;
+      width: 40%;
+      margin: 0 auto;
+      padding: 12px;
+      text-align: center;
+      font-weight: 800;
+    }
+    
+    .player-current-label {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: $white;
+    }
+    
+    .player-current-score {
+      font-size: 30px;
+    }
+
+    .winner { 
+      background-color: $green; 
+      font-weight: 300; 
+      color: $red-bold; 
+    }
+  }

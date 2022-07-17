@@ -1,0 +1,24 @@
+.result {
+  position: absolute;
+  // text-transform: uppercase;
+  text-align: center;
+  left: 50%;
+  top: 425px;
+  transform: translateX(-50%);
+  height: 100px;
+  font-size: 20px;
+  font-weight: 800;
+
+  
+  .instructions {
+    margin-top: 5%;
+    font-size: 12px;
+    text-align: center;
+    background-color: $green;
+    // text-transform: lowercase;
+    
+    .instructionLoose {
+      background-color: $red;
+    }
+  }
+}
