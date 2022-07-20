@@ -106,11 +106,10 @@ body {
   font-size: 30px;
 }
 
-.player-0-panel .winner,
-.player-1-panel .winner {
+.winner {
   background-color: #019301;
   font-weight: 300;
-  color: #e04242;
+  color: white;
 }
 
 button {

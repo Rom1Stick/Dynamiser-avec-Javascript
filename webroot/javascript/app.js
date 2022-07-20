@@ -3,6 +3,7 @@ var roundScore;
 var activePlayer;
 var gamePlaying;
 
+
 var instructions = document.querySelector('.instructions');
 
 init();
@@ -80,7 +81,7 @@ var newGame = document.querySelector('.btn-new');
 newGame.addEventListener('click', function () {
     // reload current page for clear "instructions"
     location.reload();
-    
+
     // to check that all scores are reset to 0
     init ();
 });
@@ -95,8 +96,8 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-    document.getElementById('name-0').textContent = 'Player 1';
-    document.getElementById('name-1').textContent = 'Player 2';
+    document.getElementById('name-0').textContent = 'Joueur 1';
+    document.getElementById('name-1').textContent = 'Joueur 2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');
