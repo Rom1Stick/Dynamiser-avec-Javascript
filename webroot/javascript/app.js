@@ -3,6 +3,8 @@ var roundScore;
 var activePlayer;
 var gamePlaying;
 
+var instructions = document.querySelector('.instructions');
+
 init();
 
 
@@ -17,7 +19,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         //3. Update the round score IF the rolled number was NOT a 1
         if (randomNumber !== 1) {
             instructions.style.display = 'block';
-            instructions.textContent = '+ ' + randomNumber + ' pour le joueur ' + activePlayer;
+            instructions.textContent = '+ ' + randomNumber + ' pour le joueur ' + (activePlayer + 1);
             instructions.className = ".instructions"
             //Add score
             roundScore += randomNumber;
@@ -69,22 +71,26 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    //document.querySelector('.player-0-panel').classList.remove('active');
-    //document.querySelector('.player-1-panel').classList.add('active');
-
-    // document.querySelector('.instructions').style.display = 'none';
 }
 
-document.querySelector('.btn-new').addEventListener('click', init);
+// New game 
+var newGame = document.querySelector('.btn-new');
+
+
+newGame.addEventListener('click', function () {
+    // reload current page for clear "instructions"
+    location.reload();
+    
+    // to check that all scores are reset to 0
+    init ();
+});
 
 function init() {
-    scores = [99, 0];
+    scores = [0, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
     
-    // document.querySelector('.instructions').style.display = 'none';
-
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
@@ -97,7 +103,3 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
 }
-
-//document.querySelector('#current-' + activePlayer).textContent = dice;
-//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-//var x = document.querySelector('#score-0').textContent;
