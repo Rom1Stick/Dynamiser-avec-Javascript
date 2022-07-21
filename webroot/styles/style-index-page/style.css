@@ -188,4 +188,20 @@ i {
 .result .instructions .instructionLoose {
   background-color: red;
 }
+
+.modal-content {
+  color: white;
+  font-weight: 600;
+  background-color: #0081b8;
+}
+
+.modal-content .modal-title {
+  font-weight: 800;
+  text-align: center;
+}
+
+.modal-content .modal-body {
+  font-size: 1.2rem;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

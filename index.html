@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/webroot/lib/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="/webroot/styles/style-index-page/style.css">
 
     <title>Dev-1</title>
@@ -77,20 +78,49 @@
         
         <!-- BUTTON : END  -->
         <div class="result">
-
+            
             RESULTAT  : 
             <div class="instructions" id="instructionss"></div>
         </div>
     </div>
-
+    
     <!-- PAGE : END  -->
-  
+    
 </main>
+    
+    <!-- MAIN : END -->
+    
 
-<!-- MAIN : END -->
-
-<script src="/webroot/javascript/app.js"></script>
-
+    <!-- MODAL : START  -->
+    
+    <div class="modal modal-toggle" tabindex="-1" id="myModal">
+        
+        <div class="modal-dialog">
+            
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    
+                    <h5 class="modal-title">Gagnant !</h5>
+                    
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                </div>
+                
+                <div class="modal-body"></div>
+                
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MODAL : END  -->
+    
+    <script type="module" src="/webroot/javascript/app.js"></script>
+    <script src="/webroot/lib/js/bootstrap.bundle.min.js"></script>
 </body>
 
 <!-- BODY : END  -->

@@ -6,6 +6,8 @@ var gamePlaying;
 
 var instructions = document.querySelector('.instructions');
 
+var myModal = document.querySelector('#myModal')
+
 init();
 
 
@@ -53,7 +55,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
-            window.location.pathname = '/app/winner.html'
+            modal();
+
         } else {
             //Next player
             nextPlayer();
@@ -87,13 +90,15 @@ newGame.addEventListener('click', function () {
     init ();
 });
 
+// function INIT 
+
 function init() {
-    scores = [99, 0];
+    scores = [0, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
     
-    document.querySelector('#score-0').textContent = '0';
+    document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
@@ -106,6 +111,14 @@ function init() {
     document.querySelector('.player-0-panel').classList.add('active');
 }
 
-// Winner page 
+// function MODAL
 
+function modal() {
+        let myModal = new bootstrap.Modal(
+          document.getElementById("myModal"),
+          {}
+        );
 
+        document.querySelector('.modal-body').textContent = `Félicitation Joueur ${activePlayer + 1} vous remportez la partie avec un score de ${scores[activePlayer]}`
+        myModal.show();
+};
