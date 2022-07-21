@@ -1,0 +1,13 @@
+.center_div {
+  min-width: 50vw;
+  height: 40vh;
+  color: hsl(0, 0%, 0%);
+  text-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.5);
+  font-size: 4.5rem;
+  display: block;
+  justify-content: center;
+  font-weight: bold;
+  text-align:center;
+  margin-top: 20%;
+  color: $white;
+}
