@@ -34,10 +34,12 @@ button {
     vertical-align: text-top;
     margin-top: -4px;
     transition: margin 0.3s;
+    text-align: center;
   }
 
 .btn-new { 
   top: 60px;
+  font-weight: 800;
 }
 
 .btn-roll { 
@@ -47,4 +49,15 @@ button {
 .btn-hold { 
   top: 300px;
   width: 50vw;
+}
+
+.btn-new-winner {
+  display: flex;
+  font-weight: 900;
+  color: $red-bold;
+  border: 3px $red-bold solid;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: $white;
+  margin-left: 0;
 }

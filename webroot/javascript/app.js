@@ -5,7 +5,7 @@ var gamePlaying;
 
 
 var instructions = document.querySelector('.instructions');
-
+var newGame = document.querySelector('.btn-new');
 var myModal = document.querySelector('#myModal')
 
 init();
@@ -50,6 +50,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
         // Check if player won the game
         if (scores[activePlayer] >= 100) {
+            newGame.classList.add('btn-new-winner')
             document.querySelector('#name-' + activePlayer).textContent = 'Gagnant(e) !';
             document.querySelector('.instructions').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
@@ -79,7 +80,6 @@ function nextPlayer() {
 }
 
 // New game 
-var newGame = document.querySelector('.btn-new');
 
 
 newGame.addEventListener('click', function () {

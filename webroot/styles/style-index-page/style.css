@@ -107,7 +107,6 @@ body {
 }
 
 .winner {
-  background-color: #019301;
   font-weight: 300;
   color: white;
 }
@@ -151,10 +150,12 @@ i {
   margin-top: -4px;
   -webkit-transition: margin 0.3s;
   transition: margin 0.3s;
+  text-align: center;
 }
 
 .btn-new {
   top: 60px;
+  font-weight: 800;
 }
 
 .btn-roll {
@@ -164,6 +165,19 @@ i {
 .btn-hold {
   top: 300px;
   width: 50vw;
+}
+
+.btn-new-winner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 900;
+  color: #e04242;
+  border: 3px #e04242 solid;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: white;
+  margin-left: 0;
 }
 
 .result {
