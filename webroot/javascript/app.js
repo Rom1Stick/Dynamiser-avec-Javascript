@@ -2,11 +2,11 @@ var scores;
 var roundScore;
 var activePlayer;
 var gamePlaying;
+var bestScore;
 
-
-var instructions = document.querySelector('.instructions');
-var newGame = document.querySelector('.btn-new');
-var myModal = document.querySelector('#myModal')
+var instructions        = document.querySelector('.instructions');
+var newGame             = document.querySelector('.btn-new');
+var myModal             = document.querySelector('#myModal')
 
 init();
 
@@ -44,7 +44,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gamePlaying) {
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] += roundScore;
-
+        
         // Update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
@@ -83,12 +83,29 @@ function nextPlayer() {
 // New game 
 
 
-newGame.addEventListener('click', function () {
-    // reload current page for clear "instructions"
-    location.reload();
+newGame.addEventListener('click', (e) => {
 
-    // to check that all scores are reset to 0
-    init ();
+    // selection of the best player 
+    bestScorePlayer();
+
+    // request for confirmation if the game is already in progress
+    if  (scores[0] || scores[1] !== 0) {
+        
+        let confirmNewGame = confirm(`Voulez vous vraiment recommencer votre partie ? ça serait dommage pour ${bestScore} qui était en tête 😃`);
+        if (confirmNewGame) {
+
+            location.reload();
+            init();
+        } 
+    } else {
+        
+        // reload current page for clear "instructions"
+        location.reload();
+        // to check that all scores are reset to 0
+        init ();
+    }
+    
+    e.preventDefault();
 });
 
 // function INIT 
@@ -112,6 +129,21 @@ function init() {
     document.querySelector('.player-0-panel').classList.add('active');
 }
 
+// funtion BEST SCORE
+
+function bestScorePlayer() {
+    if (scores[0] > scores[1]) {
+
+        bestScore = 'Joueur 1';
+        return bestScore
+        
+    } else {
+
+        bestScore = 'Joueur 2';
+        return bestScore
+    } 
+}
+
 // function MODAL
 
 function modal() {
@@ -128,6 +160,8 @@ function modal() {
 
 // CONFETTI
 // develop by debroah on codepen : https://codepen.io/deborah1029/pen/KKQORoK
+// Change of the places of appearance of the confetti to make them appear if the score is 100 or more;
+//   window.confettiful = new Confettiful(document.querySelector('.js-container'));
 
 class Confettiful {
     constructor(el) {
@@ -177,7 +211,4 @@ class Confettiful {
         }, 25);
     }
 }
-  
-// Change of the places of appearance of the confetti to make them appear if the score is 100 or more;
-//   window.confettiful = new Confettiful(document.querySelector('.js-container'));
   
