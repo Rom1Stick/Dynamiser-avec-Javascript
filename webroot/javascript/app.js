@@ -22,7 +22,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         //3. Update the round score IF the rolled number was NOT a 1
         if (randomNumber !== 1) {
             instructions.style.display = 'block';
-            instructions.textContent = '+ ' + randomNumber + ' pour le joueur ' + (activePlayer + 1);
+            instructions.textContent = `Le joueur ${(activePlayer + 1)} lance le dé et tombe sur ${randomNumber}`;
             instructions.className = ".instructions"
             //Add score
             roundScore += randomNumber;
@@ -30,7 +30,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         } else {
             //Next player
             instructions.style.display = 'block';
-            instructions.textContent = ' Changement de joueur ';
+            instructions.textContent = 'Le dé est tombé sur 1, changement de joueur 🎲';
             instructions.className = "instructionLoose"
             nextPlayer();
         }
@@ -116,12 +116,12 @@ function init() {
     roundScore = 0;
     gamePlaying = true;
     
-    document.getElementById('score-0').textContent = '0';
-    document.getElementById('score-1').textContent = '0';
-    document.getElementById('current-0').textContent = '0';
-    document.getElementById('current-1').textContent = '0';
-    document.getElementById('name-0').textContent = 'Joueur 1';
-    document.getElementById('name-1').textContent = 'Joueur 2';
+    document.getElementById('score-0').textContent      = '0';
+    document.getElementById('score-1').textContent      = '0';
+    document.getElementById('current-0').textContent    = '0';
+    document.getElementById('current-1').textContent    = '0';
+    document.getElementById('name-0').textContent       = 'Joueur 1';
+    document.getElementById('name-1').textContent       = 'Joueur 2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');

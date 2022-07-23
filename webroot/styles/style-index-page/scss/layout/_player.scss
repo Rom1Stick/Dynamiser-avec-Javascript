@@ -13,7 +13,7 @@
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
-      font-weight: 800;
+      font-weight: 300;
       margin-top: 20px;
       margin-bottom: 10px;
       position: relative;
@@ -27,23 +27,6 @@
       margin-bottom: 75px;
       margin-top: 25%;
     }
-    
-    .active { 
-      background-color: $blue-light; 
-
-      .player-name { 
-        font-weight: 600; 
-      }
-
-      .player-name::after {
-        font-size: 47px;
-        position: absolute;
-        color: $red-bold;
-        top: -7px;
-        right: 10px;
-      }
-    }
-    
     
     .player-current-box {
       background-color: $blue-light;
@@ -69,7 +52,29 @@
 
   }
 
-  .winner { 
-    font-weight: 300; 
-    color: white; 
+  
+  .active { 
+
+    .player-name { 
+      font-weight: 600;
+      border: 5px solid $red-bold; 
+      
+      ::after {
+        font-size: 50px;
+        position: absolute;
+        color: #EB4D4D;
+        top: -7px;
+        right: 10px;
+      
+      }
+    }
+
+    .player-current-box {
+      border: 5px solid $red-bold; 
+    }
+  }
+    
+    .winner { 
+      font-weight: 300; 
+      color: white; 
   }

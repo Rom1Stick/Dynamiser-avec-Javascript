@@ -46,7 +46,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 800;
+  font-weight: 300;
   margin-top: 20px;
   margin-bottom: 10px;
   position: relative;
@@ -60,25 +60,6 @@ body {
   color: #e04242;
   margin-bottom: 75px;
   margin-top: 25%;
-}
-
-.player-0-panel .active,
-.player-1-panel .active {
-  background-color: rgba(46, 220, 255, 0.599);
-}
-
-.player-0-panel .active .player-name,
-.player-1-panel .active .player-name {
-  font-weight: 600;
-}
-
-.player-0-panel .active .player-name::after,
-.player-1-panel .active .player-name::after {
-  font-size: 47px;
-  position: absolute;
-  color: #e04242;
-  top: -7px;
-  right: 10px;
 }
 
 .player-0-panel .player-current-box,
@@ -104,6 +85,23 @@ body {
 .player-0-panel .player-current-score,
 .player-1-panel .player-current-score {
   font-size: 30px;
+}
+
+.active .player-name {
+  font-weight: 600;
+  border: 5px solid #e04242;
+}
+
+.active .player-name ::after {
+  font-size: 50px;
+  position: absolute;
+  color: #EB4D4D;
+  top: -7px;
+  right: 10px;
+}
+
+.active .player-current-box {
+  border: 5px solid #e04242;
 }
 
 .winner {
@@ -156,6 +154,11 @@ i {
 .btn-new {
   top: 60px;
   font-weight: 800;
+  margin-top: 1%;
+}
+
+.btn-new #iconNewGame {
+  width: 15%;
 }
 
 .btn-roll {
@@ -197,6 +200,7 @@ i {
   font-size: 12px;
   text-align: center;
   background-color: #019301;
+  width: 23vw;
 }
 
 .result .instructions .instructionLoose {
