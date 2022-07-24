@@ -93,7 +93,7 @@ body {
 }
 
 .active .player-name ::after {
-  font-size: 50px;
+  font-size: 46px;
   position: absolute;
   color: #EB4D4D;
   top: -7px;
@@ -107,6 +107,7 @@ body {
 .winner {
   font-weight: 300;
   color: white;
+  font-size: 1.1rem;
 }
 
 button {
@@ -154,11 +155,11 @@ i {
 .btn-new {
   top: 60px;
   font-weight: 800;
-  margin-top: 1%;
 }
 
 .btn-new #iconNewGame {
   width: 15%;
+  margin-left: 1vw;
 }
 
 .btn-roll {
@@ -177,7 +178,7 @@ i {
   font-weight: 900;
   color: #e04242;
   border: 3px #e04242 solid;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   text-align: center;
   background-color: white;
   margin-left: 0;
@@ -200,7 +201,7 @@ i {
   font-size: 12px;
   text-align: center;
   background-color: #019301;
-  width: 23vw;
+  width: 100%;
 }
 
 .result .instructions .instructionLoose {

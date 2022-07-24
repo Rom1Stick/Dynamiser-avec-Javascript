@@ -60,7 +60,7 @@
       border: 5px solid $red-bold; 
       
       ::after {
-        font-size: 50px;
+        font-size: 46px;
         position: absolute;
         color: #EB4D4D;
         top: -7px;
@@ -77,4 +77,5 @@
     .winner { 
       font-weight: 300; 
       color: white; 
+      font-size: 1.1rem;
   }

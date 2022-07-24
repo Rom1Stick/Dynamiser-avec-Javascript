@@ -82,14 +82,13 @@ function nextPlayer() {
 
 // New game 
 
-
 newGame.addEventListener('click', (e) => {
 
     // selection of the best player 
     bestScorePlayer();
 
     // request for confirmation if the game is already in progress
-    if  (scores[0] || scores[1] !== 0) {
+    if  (((scores[0] || scores[1]) !== 0) && ((scores[0] || scores[1]) < 100)) {
         
         let confirmNewGame = confirm(`Voulez vous vraiment recommencer votre partie ? ça serait dommage pour ${bestScore} qui était en tête 😃`);
         if (confirmNewGame) {
@@ -111,7 +110,7 @@ newGame.addEventListener('click', (e) => {
 // function INIT 
 
 function init() {
-    scores = [0, 0];
+    scores = [100, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
