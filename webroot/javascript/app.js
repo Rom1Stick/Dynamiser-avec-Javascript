@@ -22,7 +22,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         //3. Update the round score IF the rolled number was NOT a 1
         if (randomNumber !== 1) {
             instructions.style.display = 'block';
-            instructions.textContent = `Le joueur ${(activePlayer + 1)} lance le dé et tombe sur ${randomNumber}`;
+            instructions.textContent = `Le joueur ${(activePlayer + 1)} lance le dé et tombe sur ${randomNumber} => (+ ${randomNumber})`;
             instructions.className = ".instructions"
             //Add score
             roundScore += randomNumber;
