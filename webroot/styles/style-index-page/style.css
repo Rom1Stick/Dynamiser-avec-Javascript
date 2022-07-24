@@ -127,6 +127,16 @@ button {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.btn-rules {
+  left: 12%;
+  font-size: 15px;
+}
+
+.btn-rules #diceGameIcons {
+  width: 20%;
+  margin: 10% 0;
+}
+
 button:hover {
   font-weight: 600;
 }
@@ -182,6 +192,7 @@ i {
   text-align: center;
   background-color: white;
   margin-left: 0;
+  padding-top: 0.8%;
 }
 
 .result {

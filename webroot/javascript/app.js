@@ -110,7 +110,7 @@ newGame.addEventListener('click', (e) => {
 // function INIT 
 
 function init() {
-    scores = [100, 0];
+    scores = [0, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
