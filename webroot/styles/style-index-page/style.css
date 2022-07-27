@@ -42,7 +42,7 @@ body {
   color: white;
   background-color: rgba(46, 220, 255, 0.599);
   border-radius: 2%;
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -163,8 +163,10 @@ i {
 }
 
 .btn-new {
-  top: 60px;
+  top: 40px;
   font-weight: 800;
+  text-align: center;
+  width: 35%;
 }
 
 .btn-new #iconNewGame {
@@ -174,17 +176,16 @@ i {
 
 .btn-roll {
   top: 250px;
+  text-align: center;
 }
 
 .btn-hold {
   top: 300px;
-  width: 50vw;
+  text-align: center;
 }
 
 .btn-new-winner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   font-weight: 900;
   color: #e04242;
   border: 3px #e04242 solid;
@@ -340,5 +341,101 @@ i {
 .confetti--animation-fast {
   -webkit-animation: confetti-fast 1.25s linear 1 forwards;
           animation: confetti-fast 1.25s linear 1 forwards;
+}
+
+@media screen and (max-width: 766px) {
+  .page {
+    width: 80vw;
+  }
+  .player-0-panel,
+  .player-1-panel {
+    height: 600px;
+    padding: 5px;
+  }
+  .player-0-panel .player-name,
+  .player-1-panel .player-name {
+    font-size: 1.2rem;
+    font-weight: 650;
+    margin-top: 55%;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .player-0-panel .player-current-box,
+  .player-1-panel .player-current-box {
+    width: 70%;
+    padding: 2px;
+  }
+  button {
+    position: absolute;
+    width: 125px;
+    left: 50%;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 650;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-rules {
+    display: none;
+  }
+  .btn-new {
+    top: 30px;
+    width: 50%;
+  }
+  .btn-new-winner {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 0.8%;
+    width: 80%;
+  }
+  .result {
+    top: 460px;
+  }
+  .result .instructions {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5%;
+    font-size: 8px;
+    text-align: center;
+    background-color: #019301;
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .page {
+    width: 90vw;
+  }
+  .player-0-panel,
+  .player-1-panel {
+    height: 600px;
+    padding: 40px;
+  }
+  .player-0-panel .player-current-box,
+  .player-1-panel .player-current-box {
+    width: 60%;
+    padding: 6px;
+  }
+  button {
+    position: absolute;
+    width: 125px;
+    left: 50%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 650;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .btn-rules {
+    width: 30vw;
+    left: 16%;
+    top: -2%;
+  }
+  .btn-new {
+    top: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

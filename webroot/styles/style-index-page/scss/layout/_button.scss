@@ -49,9 +49,11 @@ button {
   }
 
 .btn-new { 
-  top: 60px;
+  top: 40px;
   font-weight: 800;
+  text-align: center;
   // margin-top: 1%;
+  width: 35%;
 
   #iconNewGame {
     width: 15%;
@@ -61,15 +63,16 @@ button {
 
 .btn-roll { 
   top: 250px;
+  text-align: center;
 }
 
 .btn-hold { 
   top: 300px;
-  width: 50vw;
+  text-align: center;
 }
 
 .btn-new-winner {
-  display: flex;
+  display: block;
   font-weight: 900;
   color: $red-bold;
   border: 3px $red-bold solid;
@@ -78,4 +81,5 @@ button {
   background-color: $white;
   margin-left: 0;
   padding-top: 0.8%;
+  // width: 10vw;
 }

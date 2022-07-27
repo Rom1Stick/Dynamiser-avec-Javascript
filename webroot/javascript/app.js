@@ -51,7 +51,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         // Check if player won the game
         if (scores[activePlayer] >= 100) {
             newGame.classList.add('btn-new-winner')
-            document.querySelector('#name-' + activePlayer).textContent = 'Gagnant(e) !';
+            document.querySelector('#name-' + activePlayer).textContent = 'Gagnant';
             document.querySelector('.instructions').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
@@ -88,7 +88,7 @@ newGame.addEventListener('click', (e) => {
     bestScorePlayer();
 
     // request for confirmation if the game is already in progress
-    if  ((scores[0] || scores[1] !== 0) && ((scores[0] || scores[1]) < 100)) {
+    if  ((scores[0] && scores[1] !== 0) && (scores[0] && scores[1] < 100)) {
         
         let confirmNewGame = confirm(`Voulez vous vraiment recommencer votre partie ? ça serait dommage pour ${bestScore} qui était en tête 😃`);
         if (confirmNewGame) {
@@ -110,7 +110,7 @@ newGame.addEventListener('click', (e) => {
 // function INIT 
 
 function init() {
-    scores = [0, 0];
+    scores = [100, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;

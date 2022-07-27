@@ -1,0 +1,37 @@
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .page {
+    width: 90vw;
+  }
+
+  .player-0-panel,
+  .player-1-panel {
+    height: 600px;
+    padding: 40px;
+    
+    .player-current-box {
+      width: 60%;
+      padding: 6px;
+    }
+  }
+
+  button {
+    position: absolute;
+    width: 125px;
+    left: 50%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 650;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .btn-rules {
+    // display: none;
+    width: 30vw;
+    left: 16%;
+    top: -2%;
+  }
+
+  .btn-new { 
+    top: 10px;
+  }
+}
